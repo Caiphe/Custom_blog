@@ -1,0 +1,17 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container mt-5 mb-5">
+    <ul>
+        {% for post in queryset %}
+        <li>
+            <a href="/post/{{ post.id }}">
+                {{ post.title }}
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+
+{% endblock content %}
